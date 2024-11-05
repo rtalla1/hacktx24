@@ -15,7 +15,7 @@ def chat(prompt):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "Given a hard-to-understand receipt item, identify what it most likely is in as few words as possible."},
+            {"role": "system", "content": "Given a hard-to-understand receipt item, identify what it most likely is in as few words as possible. It must be a specific item."},
             {
                 "role": "user",
                 "content": prompt,

@@ -40,3 +40,8 @@ def parse_receipt(name):
                 items.append(item0.description)
     
     return items, prices
+
+if __name__ == "__main__":
+    items, prices = parse_receipt("standard-grocery-receipt-template.png")
+    print(items)
+    print(prices)
