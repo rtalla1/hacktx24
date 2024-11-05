@@ -26,7 +26,7 @@ class Receipt(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     
     # Foreign key to link uploader (user who uploaded the receipt)
-    uploader_username = db.Column(db.String(16), db.ForeignKey('user.username'), nullable=False)
+    uploader = db.Column(db.String(16), db.ForeignKey('user.username'), nullable=False)
     
     # One-to-many relationship with items
     items = db.relationship('Item', backref='receipt', lazy=True, cascade="all, delete-orphan")
